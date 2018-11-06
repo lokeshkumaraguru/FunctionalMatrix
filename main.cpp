@@ -53,6 +53,30 @@ int main()
 **/
 vector <vector <char> > initializeMatrix(int rows, int columns, char value)
 {
+
+vector < vector <char> > MatrixOne;
+
+MatrixOne.resize(rows);
+
+for(int row = 0; row < MatrixOne.size(); row++)
+{
+  MatrixOne[row].resize(rows);
+  for(int column = 0; column < MatrixOne[row].size(); column++)
+  {
+    MatrixOne[row].resize(columns);
+  }
+}
+
+for(int row = 0; row < MatrixOne.size(); row++)
+{
+  for(int column = 0; column < MatrixOne[0].size(); column++)
+  {
+    MatrixOne[row][column] = value;
+  }
+}
+
+return MatrixOne;
+
 }
 
 /**
@@ -64,4 +88,14 @@ vector <vector <char> > initializeMatrix(int rows, int columns, char value)
 **/
 void printMatrix(vector <vector <char> > matrix)
 {
+
+for(int row = 0; row < matrix.size(); row++)
+{
+  for(int column = 0; column < matrix[0].size(); column++)
+  {
+    cout<<matrix[row][column]<<" ";
+  }
+  cout<<endl;
+}
+
 }
